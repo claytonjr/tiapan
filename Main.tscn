@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Main" type="Panel"]
+margin_right = 733.0
+margin_bottom = 444.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lblCash" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 44.0
+margin_right = 166.0
+margin_bottom = 58.0
+text = "Cash: $[250]"
+
+[node name="lblCity" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 63.0
+margin_right = 166.0
+margin_bottom = 77.0
+text = "City: [city]"
+
+[node name="lblFirm" type="Label" parent="."]
+margin_left = 309.0
+margin_top = 13.0
+margin_right = 349.0
+margin_bottom = 27.0
+text = "[Firm Name]"
+
+[node name="btnShanghai" type="Button" parent="."]
+margin_left = 613.0
+margin_top = 335.0
+margin_right = 694.0
+margin_bottom = 355.0
+text = "Shanghai"
+
+[node name="btnHongKong" type="Button" parent="."]
+margin_left = 613.0
+margin_top = 363.0
+margin_right = 694.0
+margin_bottom = 383.0
+text = "Hong Kong"
+
+[node name="btnNagasaki" type="Button" parent="."]
+margin_left = 613.0
+margin_top = 389.0
+margin_right = 694.0
+margin_bottom = 409.0
+text = "Nagasaki"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProductListContainer" type="VBoxContainer" parent="."]
+margin_left = 94.0
+margin_top = 96.0
+margin_right = 618.0
+margin_bottom = 259.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btnShanghai" to="." method="DepartFromPort" binds= [ 1 ]]
+[connection signal="pressed" from="btnHongKong" to="." method="DepartFromPort" binds= [ 0 ]]
+[connection signal="pressed" from="btnNagasaki" to="." method="DepartFromPort" binds= [ 2 ]]
